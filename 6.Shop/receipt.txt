@@ -1,0 +1,8 @@
+-------------------------
+       Your Order        
+-------------------------
+06/05/2026 14:45
+  1. Burger        : 6.40  * 1    $
+
+Summary of receipt : 6.40$
+Thank you for supporting us!

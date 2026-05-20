@@ -1,0 +1,7 @@
+Burger:6.4
+Pizza:7.9
+Club Sandwich:4.5
+Hot Dog:3.2
+Coca Cola:2.2
+Fanta:1.8
+Sprite:1.8
