@@ -4,7 +4,7 @@ playlist = []
 
 
 def menu():
-    print("1. Show Playlist")
+    print("\n1. Show Playlist")
     print("2. Add Song")
     print("3. Remove Song")
     print("4. Mix & Shuffle")
@@ -60,6 +60,31 @@ def remove_song():
     else:
         print("Song not found")
 
+def shuffle_playlist():
+
+    try:
+        with open("playlist.txt", "r") as f:
+            lines = f.readlines()
+            songs = [line.strip() for line in lines]
+    except FileNotFoundError:
+        print("No playlist found to remove from\n")
+        return
+
+    if len(songs)>0:
+
+        random.shuffle(songs)
+
+        with open("playlist.txt", "w") as f:
+            for song in songs:
+                f.write(f"{song}\n")
+
+
+        print("Playlist shuffled!")
+
+    else:
+        print("Your playlist is empty!")
+
+
 while True:
 
     menu()
@@ -67,6 +92,7 @@ while True:
 
     if choice == "1":       
         show_playlist(playlist)
+     
 
     elif choice == "2":
 
@@ -76,6 +102,10 @@ while True:
     elif choice == "3":
         
         remove_song()
+
+    elif choice == "4":
+
+        shuffle_playlist()
 
     elif choice == "5":
         print("Exiting the program...")
