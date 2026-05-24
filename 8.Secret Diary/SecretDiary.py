@@ -3,20 +3,21 @@ SecretDiary  = []
 def menu():
     print("\n1. Show Menu")
     print("2. Add Thought")
-    print("3. Show Diary\n")
+    print("3. Show Diary")
+    print("4. Remove all thoughts")
+    print("5. Exit\n")
 
 
-def show_thoughts(diary):
+def show_thoughts():
 
     with  open("SecretDiary.txt", "r") as f:
     
         lines = f.readlines()
-        content = [line.strip() for line in lines]
+    content = [line.strip() for line in lines]
 
-        for index, thought in enumerate (content, start = 1):
-            print(f"{index}. {thought}")
+    for index, thought in enumerate (content, start = 1):
+        print(f"{index}. {thought}")
 
-    return diary
 while True:
 
     menu()
@@ -38,9 +39,15 @@ while True:
 
     elif choice == "3":
 
-        show_thoughts(diary)
+        show_thoughts()
 
     elif choice == "4":
+
+        with open("SecretDiary.txt", "w") as f:
+
+            print("All your thoughts deleted!")
+
+    elif choice == "5":
 
         print("Exiting...")
         break
