@@ -4,8 +4,15 @@ outlook_count = 0
 hotmail_count = 0
 
 
+with open("gmail.txt", "w") as f_gmail:
+    pass
+with open("outlook.txt", "w") as f_outlook:
+    pass
+with open("hotmail.txt", "w") as f_hotmail:
+    pass
+with open("yahoo.txt", "w") as f_yahoo:
+    pass
 
-    
 with open("raw_users.txt", "r") as f_in:
         
             for line in f_in:
