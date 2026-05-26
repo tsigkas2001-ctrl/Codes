@@ -1,0 +1,7 @@
+python
+developer
+code
+computer
+program
+terminal
+script
